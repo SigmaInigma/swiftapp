@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
+    @IBOutlet weak var text1: UITextField!
+    @IBOutlet weak var text2: UITextField!
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
-        theLabel.text = "Just Kidding I Love you! =)"
+        theLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
     }
     
     override func viewDidLoad() {

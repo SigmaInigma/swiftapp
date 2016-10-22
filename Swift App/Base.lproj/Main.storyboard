@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,6 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -29,20 +30,41 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RmH-Ky-HUR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-xf-FXs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="H6e-pl-DNN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vky-Fi-YTl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="s7t-xX-etA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TW2-jA-utz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="535-09-2xa"/>
+                            <constraint firstItem="GVC-xf-FXs" firstAttribute="top" secondItem="TW2-jA-utz" secondAttribute="bottom" constant="17.5" id="9yE-ir-22o"/>
+                            <constraint firstItem="Vky-Fi-YTl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HnW-Zl-5h6"/>
                             <constraint firstItem="Ban-7G-UCq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pj9-fj-ree"/>
                             <constraint firstItem="TW2-jA-utz" firstAttribute="top" secondItem="Ban-7G-UCq" secondAttribute="bottom" constant="40" id="Rz6-PU-xOl"/>
+                            <constraint firstItem="Vky-Fi-YTl" firstAttribute="top" secondItem="GVC-xf-FXs" secondAttribute="bottom" constant="27" id="VGs-m4-zaK"/>
                             <constraint firstItem="Ban-7G-UCq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gUQ-U5-ubG"/>
+                            <constraint firstItem="GVC-xf-FXs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tS0-V9-tP5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="GVC-xf-FXs" id="DaB-I6-Z8M"/>
+                        <outlet property="text2" destination="Vky-Fi-YTl" id="bUc-6i-y3R"/>
                         <outlet property="theLabel" destination="Ban-7G-UCq" id="2gu-uj-flu"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
